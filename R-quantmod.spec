@@ -4,7 +4,7 @@
 #
 Name     : R-quantmod
 Version  : 0.4.9
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/quantmod_0.4-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4-9.tar.gz
 Summary  : Quantitative Financial Modelling Framework
