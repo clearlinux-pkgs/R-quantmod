@@ -9,6 +9,7 @@ R-EnvStats
 R-GGally
 R-Hmisc
 R-Lahman
+R-MCMCpack
 R-NMF
 R-PKI
 R-R6
@@ -59,10 +60,13 @@ R-ipred
 R-klaR
 R-labelled
 R-latticeExtra
+R-leaflet
 R-lfe
 R-libcoin
 R-lme4
 R-lmtest
+R-lsmeans
+R-manipulateWidget
 R-maxLik
 R-memisc
 R-mi
@@ -111,4 +115,5 @@ R-vcd
 R-vegan
 R-viridis
 R-visNetwork
+R-webshot
 apache-spark
