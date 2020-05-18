@@ -4,7 +4,7 @@
 #
 Name     : R-quantmod
 Version  : 0.4.17
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.17.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.17.tar.gz
 Summary  : Quantitative Financial Modelling Framework
@@ -25,21 +25,22 @@ No detailed description available
 
 %prep
 %setup -q -c -n quantmod
+cd %{_builddir}/quantmod
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585692945
+export SOURCE_DATE_EPOCH=1589760027
 
 %install
-export SOURCE_DATE_EPOCH=1585692945
+export SOURCE_DATE_EPOCH=1589760027
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
