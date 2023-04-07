@@ -4,19 +4,21 @@
 # Using build pattern: R
 #
 Name     : R-quantmod
-Version  : 0.4.21
-Release  : 64
-URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.21.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.21.tar.gz
+Version  : 0.4.22
+Release  : 65
+URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.22.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.22.tar.gz
 Summary  : Quantitative Financial Modelling Framework
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-TTR
 Requires: R-curl
+Requires: R-jsonlite
 Requires: R-xts
 Requires: R-zoo
 BuildRequires : R-TTR
 BuildRequires : R-curl
+BuildRequires : R-jsonlite
 BuildRequires : R-xts
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
@@ -35,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680554216
+export SOURCE_DATE_EPOCH=1680880080
 
 %install
-export SOURCE_DATE_EPOCH=1680554216
+export SOURCE_DATE_EPOCH=1680880080
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
