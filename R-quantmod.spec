@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-quantmod
-Version  : 0.4.22
-Release  : 66
-URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.22.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.22.tar.gz
+Version  : 0.4.23
+Release  : 67
+URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.23.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.23.tar.gz
 Summary  : Quantitative Financial Modelling Framework
 Group    : Development/Tools
 License  : GPL-3.0
@@ -31,16 +31,19 @@ No detailed description available
 
 %prep
 %setup -q -n quantmod
+pushd ..
+cp -a quantmod buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680880080
+export SOURCE_DATE_EPOCH=1686843354
 
 %install
-export SOURCE_DATE_EPOCH=1680880080
+export SOURCE_DATE_EPOCH=1686843354
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,6 +73,7 @@ echo "CXXFLAGS = $CXXFLAGS -ftree-vectorize " >> ~/.R/Makevars
 R CMD INSTALL --preclean --use-LTO --install-tests --data-compress=none --compress=none --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library .
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
