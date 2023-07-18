@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-quantmod
-Version  : 0.4.23
-Release  : 68
-URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.23.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.23.tar.gz
+Version  : 0.4.24
+Release  : 69
+URL      : https://cran.r-project.org/src/contrib/quantmod_0.4.24.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/quantmod_0.4.24.tar.gz
 Summary  : Quantitative Financial Modelling Framework
 Group    : Development/Tools
 License  : GPL-3.0
@@ -40,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686843354
+export SOURCE_DATE_EPOCH=1689695741
 
 %install
-export SOURCE_DATE_EPOCH=1686843354
+export SOURCE_DATE_EPOCH=1689695741
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
