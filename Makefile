@@ -1,5 +1,5 @@
 PKG_NAME := R-quantmod
-URL = https://cran.r-project.org/src/contrib/quantmod_0.4.26.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/quantmod_0.4.27.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
